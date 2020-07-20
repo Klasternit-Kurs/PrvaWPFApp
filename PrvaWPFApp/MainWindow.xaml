@@ -1,0 +1,17 @@
+﻿<Window x:Class="PrvaWPFApp.MainWindow" 
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrvaWPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Zatvaranje">
+	<StackPanel>
+		<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+			<Button FontSize="24" Content="Test" Click="Klik"/>
+			<Button FontSize="24" Content="Test2" Click="Klik"/>
+		</StackPanel>
+		<Button FontSize="24" Content="Test3" Click="Klik"/>
+		<Button FontSize="24" Content="Test4" Click="Klik"/>
+	</StackPanel>
+</Window>
