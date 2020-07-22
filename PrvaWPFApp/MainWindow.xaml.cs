@@ -20,20 +20,52 @@ namespace PrvaWPFApp
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		public Osoba o = new Osoba();
 
 		public MainWindow()
 		{
 			InitializeComponent();
+
+
+
+			DataContext = o;
+			BindingGroup = new BindingGroup();
+
+			/*Binding veza = new Binding();
+			veza.Source = o;
+			veza.Path = new PropertyPath("Ime");
+			veza.Mode = BindingMode.OneWay;
+
+			BindingOperations.SetBinding(labela, Label.ContentProperty, veza);*/
+
+			/*veza = new Binding();
+			veza.Source = o;
+			veza.Path = new PropertyPath("Ime");
+			veza.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+
+			BindingOperations.SetBinding(unosTeksta, TextBox.TextProperty, veza);*/
+
 		}
 
 		private void Klik(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Kliknuto!!");
+			//BindingOperations.GetBindingExpression(unosTeksta, TextBox.TextProperty).UpdateSource();
+
+			if (!BindingGroup.CommitEdit())
+			{
+				MessageBox.Show("Los unos!");
+			}
 		}
 
 		private void Zatvaranje(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			MessageBox.Show("Bye!!!!");
 		}
+	}
+
+	public class Osoba
+	{
+		public string Ime { get; set; } = "Pera";
+		public int Broj { get; set; }
 	}
 }

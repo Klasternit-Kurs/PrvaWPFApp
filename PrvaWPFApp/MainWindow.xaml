@@ -6,12 +6,39 @@
         xmlns:local="clr-namespace:PrvaWPFApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Zatvaranje">
-	<StackPanel>
+	<!--<StackPanel>
 		<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
 			<Button FontSize="24" Content="Test" Click="Klik"/>
 			<Button FontSize="24" Content="Test2" Click="Klik"/>
 		</StackPanel>
 		<Button FontSize="24" Content="Test3" Click="Klik"/>
 		<Button FontSize="24" Content="Test4" Click="Klik"/>
-	</StackPanel>
+
+		<UniformGrid Columns="2">
+			<Label FontSize="24">Ime:</Label>
+			<TextBox Text="{Binding Ime, UpdateSourceTrigger=Explicit}" FontSize="24"/>
+			<Label FontSize="24">Broj:</Label>
+			<TextBox Text="{Binding Broj, UpdateSourceTrigger=Explicit}" Name="unosTeksta" FontSize="24"/>
+			<Label/>
+			<Button FontSize="24">OK</Button>
+		</UniformGrid>
+		
+		<Label Content="{Binding Ime, Mode=OneWay}" FontSize="24"/>
+		<Label Content="{Binding Broj, Mode=OneWay}" FontSize="24" Name="labela"/>
+	</StackPanel>-->
+	<DockPanel>
+		<!--<Button DockPanel.Dock="Left" Content="2" FontSize="40"/>
+		<Button DockPanel.Dock="Bottom" Content="1" FontSize="40"/>
+		<Button DockPanel.Dock="Bottom" Content="3" FontSize="40"/>
+		<Button DockPanel.Dock="Top" Content="4" FontSize="40"/>
+		<Button DockPanel.Dock="Right" Content="5" FontSize="40"/>-->
+		<StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 50">
+			<Button MinHeight="80" MinWidth="60" FontSize="30">1</Button>
+			<Button Margin="40 0" MinHeight="80" MinWidth="60" FontSize="30">2</Button>
+			<Button MinHeight="80" MinWidth="60" FontSize="30">3</Button>
+		</StackPanel>
+	
+		<Label Content="Podaci neki negde nesto :D"/>
+	</DockPanel>
+	
 </Window>
